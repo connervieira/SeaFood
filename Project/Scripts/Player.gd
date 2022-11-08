@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var speed = 600 # This variable determines how quickly the car will move.
 var rotation_speed = 8 # This variable determines how quickly the car will turn.
-var walk_mode = true # This variable determines the movement mode of the player. Walk mode allows the player to directly move in each of the 4 cardinal directions.
+var walk_mode = false # This variable determines the movement mode of the player. Walk mode allows the player to directly move in each of the 4 cardinal directions.
 
 
 var velocity = Vector2() # This is a placeholder variable that holds the player's velocity.
@@ -55,9 +55,9 @@ func _process(delta): # This function is executed every frame.
 	# Check to see if the user is outside of the playable area.
 	if (self.position[0] < 0): # Check to see if the player is out of bounds to the left of the playable area.
 		self.position[0] = 0 # Reset the player's location to the left-most part of the playable area.
-	elif (self.position[0] > window_dimensions[0]): # Check to see if the player is out of bounds to the right of the playable area.
-		self.position[0] = window_dimensions[0] # Reset the player's location to the right-most part of the playable area.
+	elif (self.position[0] > window_dimensions[0] * 0.85): # Check to see if the player is out of bounds to the right of the playable area.
+		self.position[0] = window_dimensions[0] * 0.85 # Reset the player's location to the right-most part of the playable area.
 	elif (self.position[1] < 0): # Check to see if the player is out of bounds to the top  of the playable area.
 		self.position[1] = 0 # Reset the player's location to the top-most part of the playable area.
-	elif (self.position[0] > window_dimensions[0]): # Check to see if the player is out of bounds to the bottom  of the playable area.
+	elif (self.position[1] > window_dimensions[1]): # Check to see if the player is out of bounds to the bottom  of the playable area.
 		self.position[1] = window_dimensions[1] # Reset the player's location to the bottom-most part of the playable area.
