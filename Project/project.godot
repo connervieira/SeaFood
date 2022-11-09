@@ -17,9 +17,9 @@ _global_script_class_icons={
 config/name="Sea Food"
 config/description="Pick up litter on the beach to save marine wildlife."
 run/main_scene="res://Scenes/Menu.tscn"
-boot_splash/image="res://Images/Bottles/BottleBlue.png"
+boot_splash/image="res://Images/Icon.png"
 boot_splash/bg_color=Color( 0.184314, 0.505882, 0.788235, 1 )
-config/icon="res://Images/Bottles/BottleBlue.png"
+config/icon="res://Images/Icon.png"
 
 [autoload]
 

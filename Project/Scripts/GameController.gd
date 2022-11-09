@@ -1,6 +1,6 @@
 extends Node
 
-var rounds = 6 # This is how many rounds will be played.
+var rounds = 2 # This is how many rounds will be played.
 var drop_size = 20 # This is how many pieces of trash will be placed each round.
 var cooldown = 7.0 # This is how many seconds between rounds.
 
