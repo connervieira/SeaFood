@@ -8,4 +8,6 @@ This is an informal to-do list for Sea Food. This is not a comprehensive changel
     - [X] Add end background.
 - [X] Add item sprites.
     - [X] Add trash sprite.
-- [ ] Add accurate 'wildlife saved' display on the end screen.
+- [X] Add accurate 'wildlife saved' display on the end screen.
+- [X] Enable planes.
+    - [X] Add appropriate texture to planes.

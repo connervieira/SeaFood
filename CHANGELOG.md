@@ -39,7 +39,12 @@ November 7th, 2022
 
 ### Factual Update
 
-*Release date to be determined*
+November 10th, 2022
 
 - Added accurate statistics to the end screen.
     - The end screen now displays the number of bottles picked up, approximate number of animals saved, and approximate years worth of plastic kept out of the ocean.
+- Changed the spawning behavior of planes.
+    - Planes now spawn progressively as the level is played, instead of all at once at the beginning.
+    - Planes now use the image of a bird as their texture.
+    - A plane's texture will flip depending on the direction it's turning.
+    - Planes are now enabled in game.

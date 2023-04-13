@@ -1,6 +1,6 @@
 extends Node
 
-var rounds = 2 # This is how many rounds will be played.
+var rounds = 6 # This is how many rounds will be played.
 var drop_size = 20 # This is how many pieces of trash will be placed each round.
 var cooldown = 7.0 # This is how many seconds between rounds.
 
@@ -13,18 +13,17 @@ func _ready(): # This function is executed when the scene first loads.
 	var umbrella_node = load("res://Nodes/Umbrella.tscn") # Load the umbrella node.
 	var plane_node = load("res://Nodes/Plane.tscn") # Load the plane node.
 	
-	for n1 in range(0, plane_count): # Loop for each plane placement.
-		var instance = plane_node.instance() # Create a new instance of the plane node.
-		add_child(instance) # Add the instance to the scene.
+	var plane_instance = plane_node.instance() # Create a new instance of the plane node.
+	add_child(plane_instance) # Add the instance to the scene.
 	
 	for n1 in range(0, umbrella_count): # Loop for each umbrella placement.
-		var instance = umbrella_node.instance() # Create a new instance of the umbrella node.
-		add_child(instance) # Add the instance to the scene.
+		var umbrella_instance = umbrella_node.instance() # Create a new instance of the umbrella node.
+		add_child(umbrella_instance) # Add the instance to the scene.
 	
 	for n1 in range(0, rounds): # Loop for each round.
 		for n2 in range(0, drop_size): # Loop for each trash placement.
-			var instance = trash_node.instance() # Create a new instance of the trash node.
-			add_child(instance) # Add the instance to the scene.
+			var trash_instance = trash_node.instance() # Create a new instance of the trash node.
+			add_child(trash_instance) # Add the instance to the scene.
 			
 		yield(get_tree().create_timer(cooldown), "timeout") # Wait before starting the next round.
 		
